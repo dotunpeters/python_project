@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "pythonproject"
+version = "1.1.0"
+description = ""
+authors = ["dotunpeters <dotunpeters@gmail.com>"]
+readme = "README.md"
+#packages = [{include = "poetry_demo"}]
+
+[tool.poetry.scripts]
+main = "pythonproject:counter"
+counter = "pythonproject.counter:main"
+reverse = "pythonproject.reverse_recursion:main"
+code = "pythonproject.encode_decode:encdec"
+immute = "pythonproject.immutables:main"
+invdict = "pythonproject.inverted_dict:main"
+
+[tool.poetry.dependencies]
+python = "^3.11.6"
+black = "^23.12.1"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^5.0.0"
+pytest-mock = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
